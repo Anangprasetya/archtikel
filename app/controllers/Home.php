@@ -11,4 +11,8 @@ class Home extends Controller
     {
         $this->view('v_profile');
     }
+    public function about()
+    {
+        $this->view('v_about');
+    }
 }
