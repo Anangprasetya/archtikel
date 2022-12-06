@@ -8,10 +8,10 @@ class Account extends Controller
 		if (isset($_SESSION["user_login"])) {
 			header('Location:' . BASEURL);
 		}
-		// $this->view('layout/header');
-		// $this->view('akun/login');
-		$this->view('akun/login_t');
-		// $this->view('layout/header');
+		$this->view('layout/header');
+		$this->view('akun/login');
+		// $this->view('akun/login_t');
+		$this->view('layout/footer');
 	}
 
 	public function register()
@@ -22,7 +22,7 @@ class Account extends Controller
 
 		$this->view('layout/header');
 		$this->view('akun/register');
-		$this->view('layout/header');
+		$this->view('layout/footer');
 	}
 
 	public function proses_register()
