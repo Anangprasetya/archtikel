@@ -7,4 +7,8 @@ class Home extends Controller
     {
         $this->view('v_home');
     }
+    public function profile()
+    {
+        $this->view('v_profile');
+    }
 }
