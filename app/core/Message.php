@@ -3,13 +3,12 @@
 class Message
 {
 
-	public static function setMessage($pesan, $aksi, $tipe, $beda = null)
+	public static function setMessage($pesan, $aksi, $tipe)
 	{
 		$_SESSION['flash'] = [
 			'pesan' => $pesan,
 			'aksi' => $aksi,
-			'tipe' => $tipe,
-			'beda' => $beda
+			'tipe' => $tipe
 		];
 	}
 
@@ -23,15 +22,13 @@ class Message
 		}
 	}
 
-	public static function getTemplateMessage($beda = null)
+	public static function getTemplateMessage()
 	{
 		if (isset($_SESSION['flash'])) {
-			if ($beda == $_SESSION['flash']['beda']) {
-				echo '
-				<footer class="notification-box ' . $_SESSION['flash']['tipe'] . '">' . $_SESSION['flash']['pesan'] . " " . $_SESSION['flash']['aksi'] . '</footer>';
+			echo '
+			<footer class="notification-box ' . $_SESSION['flash']['tipe'] . '">' . $_SESSION['flash']['pesan'] . " " . $_SESSION['flash']['aksi'] . '</footer>';
 
-				unset($_SESSION['flash']);
-			}
+			unset($_SESSION['flash']);
 		}
 	}
 }
