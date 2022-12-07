@@ -3,7 +3,7 @@
 // ======================
 // URL
 // ======================
-define('BASEURL', 'http://localhost/pwdTugas/kelompok/Archtikel/public/');
+define('BASEURL', 'http://localhost/archtikel/public/');
 
 
 // ======================
@@ -22,9 +22,9 @@ define('BASEURL', 'http://localhost/pwdTugas/kelompok/Archtikel/public/');
 
 */
 define('DB_HOST', 'localhost');
-define('DB_USER', 'admin');
-define('DB_PASS', 'password');
-define('DB_NAME', 'test_artikel');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'artikel');
 
 
 
