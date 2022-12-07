@@ -3,8 +3,8 @@
 // ======================
 // URL
 // ======================
+define('BASEURL', 'http://localhost/pwdTugas/repo/archtikel/public/');
 // define('BASEURL', 'http://localhost/archtikel/public/');
-define('BASEURL', 'http://localhost/archtikel/public/');
 
 
 // ======================
