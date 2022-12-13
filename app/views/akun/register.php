@@ -1,17 +1,41 @@
-<h2>REGISTRASI</h2>
-<?php Message::getMessage(); ?>
-<form action="<?= BASEURL . 'account/proses_register' ?>" method="POST">
-	<label for="">Nama</label>
-	<input type="text" name="nama" placeholder="Masukkan nama" required> <br>
+<head>
+<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+	<link rel="stylesheet" href="<?php echo BASEURL . '/archtikelCSS/style.css' ?>">
+</head>
 
-	<label for="">Username</label>
-	<input type="text" name="username" placeholder="Masukkan username" required> <br>
+<body class="text-center">
+	<main class="form-signin w-100 m-auto">
+		<?php Message::getMessage(); ?>
+		<form action="<?= BASEURL . 'account/proses_register' ?>" method="POST"> 
+			<!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+			<h1 class="h3 mb-3 fw-normal">Sign In</h1>
 
-	<label for="">Email</label>
-	<input type="email" name="email" placeholder="Masukkan email" required> <br>
+			<div class="form-floating">
+				<input type="text" class="form-control" name="nama" placeholder="nama" required>
+				<label for="floatingInput">Nama</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="text" class="form-control" name="username" placeholder="username" required>
+				<label for="floatingInput">Username</label>
+			</div><br>
+			<div class="form-floating">
+				<input type="email" class="form-control" name="email" placeholder="email" required>
+				<label for="floatingInput">Email</label>
+			</div><br>
 
-	<label for="">Password</label>
-	<input type="password" name="password" placeholder="Masukkan password" required> <br>
+			<div class="form-floating">
+				<input type="password" class="form-control" name="password" placeholder="Password" required>
+				<label for="floatingPassword">Password</label>
+			</div><br>
+			<!-- <div class="checkbox mb-3">
+				<label>
+					<input type="checkbox" value="i-agree"> I agree with terms and condition
+				</label>
+			</div> -->
+			<button class="btn w-100 btn-primary" type="submit">Registrasi</button>
+		</form>
+	</main>
+</body>
 
-	<button type="submit">Registrasi</button>
-</form>
+
+

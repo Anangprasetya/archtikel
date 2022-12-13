@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
-	<link rel="stylesheet" href=".\style.css">
+	<link rel="stylesheet" href="<?php echo BASEURL . '/archtikelCSS/style.css' ?>">
 </head>
 
 <body class="text-center">
@@ -15,7 +15,7 @@
 			<div class="form-floating">
 				<input type="text" class="form-control" name="username" placeholder="username" required>
 				<label for="floatingInput">Username</label>
-			</div>
+			</div><br>
 			<div class="form-floating">
 				<input type="password" class="form-control" name="password" placeholder="Password" required>
 				<label for="floatingPassword">Password</label>
