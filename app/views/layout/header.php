@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+  
+  <title>Novelia</title>
+  <link rel="icon" href="<?php echo BASEURL . '/img/fav_novelia.png' ?>" type="image/x-icon">
 
-  <title>My Application</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
 
   <!-- PEMANGGILAN CSS DI LOCAL -->
-  <link rel="stylesheet" href="<?php echo BASEURL . 'archtikelCSS/style.css' ?>">
+  
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
@@ -37,7 +39,7 @@
     }
 
     .login {
-      padding-left: 70%;
+      padding-left: 67%;
     }
 
     .novelia {
@@ -61,6 +63,10 @@
       background-color: white;
       color: black;
     }
+    img{
+      width: 45px;
+      margin: 7px;
+    }
   </style>
 
 </head>
@@ -72,9 +78,9 @@
 
         <!-- //Navbar Login -->
         <?php if (isset($_SESSION["user_login"])) : ?>
-          <!-- <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-        </a> -->
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="<?php echo BASEURL . '/img/novelia.svg' ?>"/></svg>
+          </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="<?= BASEURL ?>" class="nav-link px-2 text-white">Home</a></li>
@@ -91,9 +97,10 @@
           </div>
 
         <?php else : ?>
-
-          <!-- //Navbar Login2 -->
-
+          <!-- <a href="<" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href=""/></svg>
+          </a> -->
+          <img src="<?php echo BASEURL . '/img/novelia.svg' ?>" alt="" srcset="">
           <h2 class="novelia">Novelia</h2>
           <div class="text-end login">
             <a href="<?= BASEURL . 'account/' ?>" class="btn btn-outline-light me-2 btn-blue">Login</a>
