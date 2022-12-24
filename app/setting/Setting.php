@@ -3,7 +3,7 @@
 // ======================
 // URL
 // ======================
-define('BASEURL', 'http://localhost/pwdTugas/kelompok/Archtikel/public/');
+define('BASEURL', 'http://localhost/pwdTugas/styleProjek/archtikel/public/');
 
 
 // ======================

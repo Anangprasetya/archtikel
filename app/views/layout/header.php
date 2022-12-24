@@ -21,24 +21,64 @@
         });
     </script>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <ul>
-        <li><a href="<?= BASEURL ?>">Home</a></li>
-        <?php if (isset($_SESSION["user_login"])) : ?>
-            <li><a href="<?= BASEURL . 'artikel/' ?>">Notifikasi</a></li>
-            <li>
-                <a href="<?= BASEURL . 'artikel/' ?>">Artikel</a>
-                <ul>
-                    <li><a href="<?= BASEURL . 'artikel/buat' ?>">Buat artikel baru</a></li>
-                    <li><a href="<?= BASEURL . 'artikel/draf' ?>">Draf artikel</a></li>
-                    <li><a href="<?= BASEURL . 'artikel/posting' ?>">Posting Artikel</a></li>
-                </ul>
-            </li>
-            <li><a href="<?= BASEURL . 'account/out' ?>">Logout</a></li>
-        <?php else : ?>
-            <li><a href="<?= BASEURL . 'account/' ?>">Login</a></li>
-            <li><a href="<?= BASEURL . 'account/register' ?>">Registrasi</a></li>
-        <?php endif; ?>
-    </ul>
+    <?php if (isset($_SESSION["user_login"])) : ?>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+            <div class="container-md">
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= BASEURL ?>">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Notifikasi</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Artikel
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/buat' ?>">Buat Artikel</a></li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/draf' ?>">Draf Artikel</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/posting' ?>">Posting Artikel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="<?= BASEURL . 'account/out' ?>" class="btn btn-outline-light">Logout</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <?php else : ?>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+            <div class="container-md">
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= BASEURL ?>">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="<?= BASEURL . 'account/' ?>" class="btn btn-outline-light">Login</a>
+                        <a href="<?= BASEURL . 'account/register' ?>" class="btn btn-outline-light ms-2">Register</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <?php endif; ?>
