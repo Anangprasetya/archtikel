@@ -2,24 +2,72 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>My Application</title>
-    <link rel="stylesheet" href="">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/id.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#kategori').select2({
-                placeholder: "Pilih Kategori",
-                allowClear: true,
-                language: "id"
-            });
-        });
-    </script>
+  
+  <title>Novelia</title>
+  <link rel="icon" href="<?php echo BASEURL . '/img/fav_novelia.png' ?>" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+
+  <!-- PEMANGGILAN CSS DI LOCAL -->
+  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/id.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#kategori').select2({
+        placeholder: "Pilih Kategori",
+        allowClear: true,
+        language: "id"
+      });
+    });
+  </script>
+  <style>
+    .novelia-bg {
+      color: white;
+      background-color: rgb(56, 180, 218);
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
+
+    .login {
+      padding-left: 67%;
+    }
+
+    .novelia {
+      font: bold 42px "Abril Fatface";
+      color: rgb(236, 237, 233);
+    }
+
+    .gradient-text {
+      background-image: linear-gradient(60deg, rgb(38, 92, 101), rgb(236, 237, 233));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .btn-reg {
+      color: rgb(56, 180, 218);
+      background-color: rgb(38, 92, 101);
+    }
+
+    .btn-reg:hover {
+      background-color: white;
+      color: black;
+    }
+    img{
+      width: 45px;
+      margin: 7px;
+    }
+  </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
