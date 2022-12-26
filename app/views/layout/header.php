@@ -29,7 +29,7 @@
     <?php if (isset($_SESSION["user_login"])) : ?>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
             <div class="container-md">
-                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">Navbar</a>
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">ArchTikel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -48,10 +48,11 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/buat' ?>">Buat Artikel</a></li>
                                 <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/draf' ?>">Draf Artikel</a></li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/posting' ?>">Posting Artikel</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/posting' ?>">Posting Artikel</a></li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel' ?>">Semua Artikel</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -64,7 +65,7 @@
     <?php else : ?>
         <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
             <div class="container-md">
-                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">Navbar</a>
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">ArchTikel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
