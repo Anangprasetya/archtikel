@@ -69,45 +69,65 @@
     }
   </style>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
 </head>
 
 <body>
-  <header class="p-3 novelia-bg">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
-        <!-- //Navbar Login -->
-        <?php if (isset($_SESSION["user_login"])) : ?>
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="<?php echo BASEURL . '/img/novelia.svg' ?>"/></svg>
-          </a>
-
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="<?= BASEURL ?>" class="nav-link px-2 text-white">Home</a></li>
-            <li><a href="<?= BASEURL . 'artikel/' ?>" class="nav-link px-2 text-white">Notifikasi</a></li>
-            <li><a href="<?= BASEURL . 'artikel/' ?>" class="nav-link px-2 text-white">Artikel</a></li>
-          </ul>
-
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark " placeholder="Search..." aria-label="Search">
-          </form>
-
-          <div class="text-end">
-            <a href="<?= BASEURL . 'account/out' ?>" class="btn btn-reg">Logout</a>
-          </div>
-
-        <?php else : ?>
-          <!-- <a href="<" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href=""/></svg>
-          </a> -->
-          <img src="<?php echo BASEURL . '/img/novelia.svg' ?>" alt="" srcset="">
-          <h2 class="novelia">Novelia</h2>
-          <div class="text-end login">
-            <a href="<?= BASEURL . 'account/' ?>" class="btn btn-outline-light me-2 btn-blue">Login</a>
-            <a href="<?= BASEURL . 'account/register' ?>" class="btn btn-reg">Register</a>
-          </div>
-
-        <?php endif; ?>
-      </div>
-    </div>
-  </header>
+    <?php if (isset($_SESSION["user_login"])) : ?>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+            <div class="container-md">
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">ArchTikel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= BASEURL ?>">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Notifikasi</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Artikel
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/buat' ?>">Buat Artikel</a></li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/draf' ?>">Draf Artikel</a></li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel/posting' ?>">Posting Artikel</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="<?= BASEURL . 'artikel' ?>">Semua Artikel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="<?= BASEURL . 'account/out' ?>" class="btn btn-outline-light">Logout</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <?php else : ?>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary mb-3">
+            <div class="container-md">
+                <a class="navbar-brand mb-0 h1" href="<?= BASEURL ?>">ArchTikel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= BASEURL ?>">Home</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <a href="<?= BASEURL . 'account/' ?>" class="btn btn-outline-light">Login</a>
+                        <a href="<?= BASEURL . 'account/register' ?>" class="btn btn-outline-light ms-2">Register</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <?php endif; ?>

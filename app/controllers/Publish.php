@@ -17,7 +17,7 @@ class Publish extends Controller
 
             $this->view('layout/header');
             $this->view('artikel/lihat_artikel', $data);
-            $this->view('layout/header');
+            $this->view('layout/footer');
         }
     }
 

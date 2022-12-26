@@ -47,7 +47,7 @@ class Account extends Controller
 				Message::setMessage("Berhasil", "Melakukan Login", "success");
 				header('Location:' . BASEURL);
 			} else {
-				Message::setMessage("Gagal", "login, periksa Username dan Password kembali", "show-error");
+				Message::setMessage("Gagal", "login, periksa Username dan Password kembali", "danger");
 				header('Location:' . BASEURL . 'account/');
 			}
 		}
