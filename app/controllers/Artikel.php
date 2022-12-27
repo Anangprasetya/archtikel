@@ -106,7 +106,11 @@ class Artikel extends Controller
     {
         $this->view('layout/header');
         $single_artikel = $this->model("Artikel_model")->getFindArtikel($slug);
+        echo '<div class="container-md">';
+        echo '<div class="row">';
         echo $single_artikel["isi_posting"];
+        echo '</div>';
+        echo '</div>';
         $this->view('layout/footer');
     }
 
