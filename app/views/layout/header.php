@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Blogger</title>
-    <link rel="icon" href="<?php echo BASEURL . 'img/fav_novelia.png' ?>" type="image/x-icon">
+    <title>My Application</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -92,5 +91,8 @@
                 </div>
             </div>
         </nav>
+
+
+
 
     <?php endif; ?>
