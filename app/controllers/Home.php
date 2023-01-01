@@ -12,7 +12,7 @@ class Home extends Controller
 		} else {
 			$this->view('layout/header');
 			$this->view('myhome');
-			$this->view('layout/footer');
+			// $this->view('layout/footer');
 		}
 	}
 }
