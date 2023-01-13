@@ -3,6 +3,12 @@
 
 class Home extends Controller
 {
+	private $artikelModel;
+	public function __construct()
+	{
+		$this->artikelModel = $this->model('Artikel_model');
+	}
+
 	public function index()
 	{
 		if (isset($_SESSION["user_login"])) {
@@ -10,9 +16,14 @@ class Home extends Controller
 			$this->view('myhomelogin');
 			$this->view('layout/footer');
 		} else {
-			$this->view('layout/header');
-			$this->view('myhome');
-			$this->view('layout/footer');
+			$data["artikel"] = $this->artikelModel->getPostingAll();
+			// $this->view('layout/header');
+			// $this->view('myhome');
+			// $this->view('layout/footer');
+
+			$this->view('front/header');
+			$this->view('develop2', $data);
+			$this->view('front/footer');
 		}
 	}
 }
