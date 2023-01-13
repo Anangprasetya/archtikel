@@ -37,4 +37,15 @@ class Publish extends Controller
             echo "aman";
         }
     }
+
+    public function pencarian()
+    {
+        $ambil = $this->model("Artikel_model")->getSearch($_POST["key"]);
+
+        $data["artikel"] = $ambil;
+
+        $this->view('front/header');
+        $this->view('develop2', $data);
+        $this->view('front/footer');
+    }
 }
