@@ -8,10 +8,14 @@ class Account extends Controller
 		if (isset($_SESSION["user_login"])) {
 			header('Location:' . BASEURL);
 		}
-		$this->view('layout/header');
-		$this->view('akun/login');
+		// $this->view('layout/header');
+		// $this->view('akun/login');
+
 		// $this->view('akun/login_t');
-		$this->view('layout/footer');
+
+		// $this->view('layout/footer');
+
+		$this->view('akun/login2');
 	}
 
 	public function register()
@@ -20,9 +24,11 @@ class Account extends Controller
 			header('Location:' . BASEURL);
 		}
 
-		$this->view('layout/header');
-		$this->view('akun/register');
-		$this->view('layout/footer');
+		// $this->view('layout/header');
+		// $this->view('akun/register');
+		// $this->view('layout/footer');
+
+		$this->view('akun/register2');
 	}
 
 	public function proses_register()
@@ -47,7 +53,7 @@ class Account extends Controller
 				Message::setMessage("Berhasil", "Melakukan Login", "success");
 				header('Location:' . BASEURL);
 			} else {
-				Message::setMessage("Gagal", "login, periksa Username dan Password kembali", "danger");
+				Message::setMessage("Gagal Login", "periksa Username dan Password kembali", "danger");
 				header('Location:' . BASEURL . 'account/');
 			}
 		}

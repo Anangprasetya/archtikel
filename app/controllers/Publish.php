@@ -9,15 +9,22 @@ class Publish extends Controller
         } else {
 
             $user = $this->model("Account_model")->getFindUserID($single_artikel["id_users"]);
+            $kategori = $this->model("Category_model")->getFindbyArtikel($single_artikel["id_posting"]);
 
             $data = [
                 "artikel" => $single_artikel,
-                "user" => $user
+                "user" => $user,
+                "kategori" => $kategori
             ];
 
-            $this->view('layout/header');
-            $this->view('artikel/lihat_artikel', $data);
-            $this->view('layout/footer');
+            // $this->view('layout/header');
+            // $this->view('artikel/lihat_artikel', $data);
+            // $this->view('layout/footer');
+            // print_r($data);
+
+            $this->view('front/header');
+            $this->view('artikel/lihat_artikel2', $data);
+            $this->view('front/footer');
         }
     }
 
@@ -29,5 +36,16 @@ class Publish extends Controller
         } else {
             echo "aman";
         }
+    }
+
+    public function pencarian()
+    {
+        $ambil = $this->model("Artikel_model")->getSearch($_POST["key"]);
+
+        $data["artikel"] = $ambil;
+
+        $this->view('front/header');
+        $this->view('develop2', $data);
+        $this->view('front/footer');
     }
 }

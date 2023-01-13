@@ -65,6 +65,19 @@ class Artikel_model
         return null;
     }
 
+    public function getPostingAll()
+    {
+        $query = "SELECT * FROM $this->table WHERE tanggalPublish_posting IS NOT NULL";
+
+        $this->db->query($query);
+        $x = $this->db->execute();
+
+        if ($x->num_rows > 0) {
+            return $x->fetch_all(MYSQLI_ASSOC);
+        }
+        return null;
+    }
+
     public function updateKonten($data)
     {
         $isi = "'" . $data["isikonten"] . "'";
@@ -189,5 +202,18 @@ class Artikel_model
             return true;
         }
         return false;
+    }
+
+    public function getSearch($var)
+    {
+        $query = "SELECT * FROM $this->table WHERE tanggalPublish_posting IS NOT NULL AND judul_posting LIKE '%$var%'";
+
+        $this->db->query($query);
+        $x = $this->db->execute();
+
+        if ($x->num_rows > 0) {
+            return $x->fetch_all(MYSQLI_ASSOC);
+        }
+        return null;
     }
 }
